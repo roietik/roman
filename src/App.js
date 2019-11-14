@@ -2,11 +2,6 @@ import React from 'react';
 import ListWrapper from './components/ListWrapper/ListWrapper';
 import './App.css';
 
-const App = () => (
-  <>
-  <p>app component</p>
-  <ListWrapper/>
-  </>
-)
+const App = () => <ListWrapper/>
 
 export default App;
