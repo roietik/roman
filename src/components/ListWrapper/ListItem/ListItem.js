@@ -2,7 +2,7 @@ import React from 'react';
 
 const ListItem = () => (
     <li>
-        <img src={} />
+        <img src={'#'} />
         <div>
             <h2>Dan Abramov</h2>
             <p>It is a good idea to think of your PC as an office.</p>
