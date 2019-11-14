@@ -16,9 +16,7 @@ const item = (item) => {
 
 const ListWrapper = () => (
     <ul className="listWrapper">
-        {
-            twitterAccounts.map(item)
-        }
+        {twitterAccounts.map(item)}
     </ul>
 )
 
