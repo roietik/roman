@@ -1,0 +1,21 @@
+@import "~sass-rem";
+:root {
+  --dark-gray: #818181;
+}
+.wrapper {
+    display: inline-flex;
+
+    .navItem {
+        list-style: none;
+        &Link {
+            text-decoration: none;
+            color: var(--dark-gray);
+            margin-right: 50px;
+    
+            &Active {
+                font-weight: 700;
+            }
+                
+        }
+    }
+}

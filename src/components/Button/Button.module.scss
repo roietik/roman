@@ -1,0 +1,21 @@
+@import "~sass-rem";
+:root {
+  --blue: #1f58ff;  
+  --white: #ffffff;
+}
+.button {
+    font-size: rem(10px);
+    text-decoration: none;
+    padding: rem(7px 12px);
+    font-weight: 500;
+    background: none;
+    border: rem(2px) solid var(--blue);
+    color: var(--blue);
+  }
+  .secondary {
+    @extend .button;
+    background: var(--blue);
+    color: var(--white);
+    
+  }
+

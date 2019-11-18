@@ -1,0 +1,75 @@
+@import "~sass-rem";
+
+:root {
+    --blue: #1f58ff;  
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        top: rem(35px);
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.95);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        top: 0;
+
+    }
+}
+.animation {
+    animation: appear .5s ease;
+}
+  
+  
+.wrapper {
+
+    display: flex;
+    align-items: center;
+    padding: rem(50px 30px);
+    margin: 0;
+    position: relative;
+    &:last-child {
+        animation: appear .5s ease;
+   
+    }
+
+    .image {
+        flex-shrink: 0;
+        width: rem(150px);
+        height: rem(150px);
+        border-radius: 50%;
+        margin-right: rem(30px);
+    }
+
+    .imageNone {
+        @extend .image;
+        background: url('https://i.pravatar.cc/200') no-repeat;
+        background-size: cover;
+    }
+    
+    .name {
+    
+        color: var(--blue);
+        margin: 0;
+        font-weight: 700;
+    }
+    
+    .description {
+    
+        font-weight: 300;
+    }
+    .button {
+    
+        padding: rem(7px 12px);
+        background: none;
+        font-size: rem(10px);
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--blue);
+        border: rem(2px) solid var(--blue);
+    }
+}

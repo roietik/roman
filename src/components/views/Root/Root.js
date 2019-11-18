@@ -1,7 +1,13 @@
 import React from 'react';
-import ListWrapper from './components/ListWrapper/ListWrapper';
-import Form from './components/Form/Form'
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import List from '../../List/List';
+import Form from '../../Form/Form';
+import TwittersView from '../TwittersView/TwittersVIew';
+import NotesView from '../NotesView/NotesView';
+import ArticlesView from '../ArticlesView/ArticlesView';
+import Header from '../../Header/Header';
+import Modal from '../../Modal/Modal';
+import './Root.module.scss';
 
 const initState = [
     {
@@ -31,16 +37,17 @@ const initState = [
 ]
 
 
-class App extends React.Component {
+class Root extends React.Component {
 
     state = {
-        items: [...initState]
+        items: [...initState],
+        isModalOpen: false 
     }
 
     addItem = (e) => {
         e.preventDefault();
 
-        const newItem =     {
+        const newItem = {
             name: e.target[0].value,
             twitterLink: e.target[1].value,
             image: e.target[2].value,
@@ -50,20 +57,42 @@ class App extends React.Component {
 
         this.setState(
             prevState => (
-                {items: [...prevState.items, newItem]}
+                { items: [...prevState.items, newItem] }
             )
         )
         e.target.reset();
     }
 
+    openModal = () => {
+        this.setState({
+            isModalOpen: true
+        })
+    }
+
+    closeModal = () => {
+        this.setState({
+            isModalOpen: false
+        })
+    }
+
     render() {
+
+        const {isModalOpen} = this.state;
+
         return (
-            <>
-                <ListWrapper items={this.state.items} />
-                <Form submitFn={this.addItem} />
-            </>
+                <BrowserRouter>
+                    <>
+                        <Header openModalFn={this.openModal}/>
+                        <Switch>
+                            <Route exact path="/" component={TwittersView}/>
+                            <Route path="/notes" component={NotesView}/>
+                            <Route path="/articles" component={ArticlesView}/>
+                        </Switch>
+                        { isModalOpen && <Modal closeModalFn={this.closeModal} />}
+                    </>
+                </BrowserRouter>
         )
     }
 }
 
-export default App;
+export default Root; 
