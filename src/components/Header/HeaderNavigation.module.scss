@@ -1,5 +1,6 @@
 @import "~sass-rem";
 :root {
+  --blue: #1f58ff;  
   --dark-gray: #818181;
 }
 .wrapper {
@@ -7,6 +8,8 @@
 
     .navItem {
         list-style: none;
+        transition: all .5s;
+
         &Link {
             text-decoration: none;
             color: var(--dark-gray);
@@ -14,6 +17,10 @@
     
             &Active {
                 font-weight: 700;
+            }
+            &:Hover {
+                color: var(--blue);
+                transition: all .5s;
             }
                 
         }

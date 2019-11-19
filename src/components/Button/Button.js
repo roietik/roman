@@ -18,7 +18,7 @@ const Button = ({children, href, secondary, ...props}) => {
                     {children}
                 </a>
             ) : (
-                <button className={buttonClass} {...props}>
+                <button className={buttonClass}  {...props}>
                     {children}
                 </button>
             )

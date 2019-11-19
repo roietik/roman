@@ -3,6 +3,7 @@
   --blue: #1f58ff;  
   --gray: #7d7d7d;
 }
+@keyframes fadeIn{from{opacity:0}to{opacity:1}};
 
 .wrapper {
     width: 100%;
@@ -18,10 +19,39 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      div {
+        &:nth-child(2) {
+          label {
+            animation: fadeIn 500ms ease-in-out 600ms both;
+          }
+        }
+        &:nth-child(3) {
+          label {
+            animation: fadeIn 500ms ease-in-out 800ms both;
+          }
+        }
+        &:nth-child(4) {
+          label {
+            animation: fadeIn 500ms ease-in-out 1000ms both;
+          }
+        }
+        &:nth-child(5) {
+          label {
+            animation: fadeIn 500ms ease-in-out 1200ms both;
+          }
+        }
+      }
+  
+      }
 
       button {
         margin-top: 50px;
+        animation: fadeIn 500ms ease-in-out 1600ms both;
+
       } 
+      .radioWrapper {
+        display: inline-flex;
+        animation: fadeIn 500ms ease-in-out 400ms both;
     }
   }
   

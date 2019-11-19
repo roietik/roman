@@ -3,6 +3,9 @@
   --blue: #1f58ff;  
   --gray: #7d7d7d;
 }
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}};
+
   .formItem {
     width: 100%;
     margin: rem(24px 0);
@@ -24,6 +27,7 @@
     left: 0;
     transition: 0.2s ease-out all;
     font-size: rem(16px);
+
   }
   
   .input,

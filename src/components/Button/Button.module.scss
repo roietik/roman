@@ -11,11 +11,24 @@
     background: none;
     border: rem(2px) solid var(--blue);
     color: var(--blue);
+    transition: all .5s;
+    &:hover {
+      background: var(--blue);
+      border: rem(2px) solid var(--blue);
+      color: var(--white);
+      transition: all .5s;
+    }
   }
   .secondary {
     @extend .button;
     background: var(--blue);
     color: var(--white);
+    &:hover {
+      background: var(--white);
+      border: rem(2px) solid var(--blue);
+      color: var(--blue);
+      transition: all .5s;
+    }
     
   }
 
