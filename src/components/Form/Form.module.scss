@@ -1,9 +1,4 @@
-@import "~sass-rem";
-:root {
-  --blue: #1f58ff;  
-  --gray: #7d7d7d;
-}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}};
+@import '../../assets/scss/base.scss';
 
 .wrapper {
     width: 100%;

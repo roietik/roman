@@ -1,7 +1,17 @@
 import React from "react";
+import AppContext from '../../../context';
+import List from '../../List/List';
+import Title from '../../Title/Title'
 
 const NotesView = () => (
-    <h2>Notes View</h2>
+    <>
+        <Title SectionTitle>Notes View</Title>
+        <AppContext.Consumer>
+            {(context) => (
+                <List items={context.note} />
+            )}
+        </AppContext.Consumer>
+    </>
 )
 
 export default NotesView;

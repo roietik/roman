@@ -1,47 +1,49 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import AppContext from '../../../context';
-import List from '../../List/List';
-import Form from '../../Form/Form';
-import TwittersView from '../TwittersView/TwittersVIew';
+import TwittersView from '../TwittersView/TwittersView';
 import NotesView from '../NotesView/NotesView';
 import ArticlesView from '../ArticlesView/ArticlesView';
 import Header from '../../Header/Header';
 import Modal from '../../Modal/Modal';
 import './Root.module.scss';
+import dan from '../../../assets/images/danabramov.jpg';
+import ryan from '../../../assets/images/ryanflorence.jpg';
+import michael from '../../../assets/images/michaeljackson.jpg';
+import kent from '../../../assets/images/kentcdodds.jpg';
 
-const initState = [
-    {
-        name: 'Dan Abramov',
-        image: "/assets/images/danabramov.jpg",
-        description: 'Working on @reactjs. The demo guy.',
-        twitterLink: 'https://twitter.com/dan_abramov',
-    },
-    {
-        name: 'Ryan Florence',
-        image: '/assets/images/ryanflorence.jpg',
-        description: 'Making React accessible for users and developers at https://reach.tech . Online learning, workshops, OSS, and consulting.',
-        twitterLink: 'https://twitter.com/ryanflorence',
-    },
-    {
-        name: 'Michael Jackson',
-        image: '/assets/images/michaeljackson.jpg',
-        description: 'Maker. Co-author of React Router. Working on @ReactTraining. Created @unpkg. Head over heels for @cari.',
-        twitterLink: 'https://twitter.com/mjackson',
-    },
-    {
-        name: 'Kent C. Dodds',
-        image: '/assets/images/kentcdodds.jpg',
-        description: 'Making software development more accessible · Husband, Father, Latter-day Saint, Teacher, OSS, GDE, @TC39 · @PayPalEng @eggheadio @FrontendMasters · #JS',
-        twitterLink: 'https://twitter.com/kentcdodds',
-    },
-]
+
 
 
 class Root extends React.Component {
 
     state = {
-        twitter: [],
+        twitter: [
+            {
+                title: 'Dan Abramov',
+                description: 'Working on @reactjs. The demo guy.',
+                image: dan,
+                link: 'https://twitter.com/dan_abramov',
+            },
+            {
+                title: 'Ryan Florence',
+                description: 'Making React accessible for users and developers at https://reach.tech . Online learning, workshops, OSS, and consulting.',
+                image: ryan,
+                link: 'https://twitter.com/ryanflorence',
+            },
+            {
+                title: 'Michael Jackson',
+                description: 'Maker. Co-author of React Router. Working on @ReactTraining. Created @unpkg. Head over heels for @cari.',
+                image: michael,
+                link: 'https://twitter.com/mjackson',
+            },
+            {
+                title: 'Kent C. Dodds',
+                description: 'Making software development more accessible · Husband, Father, Latter-day Saint, Teacher, OSS, GDE, @TC39 · @PayPalEng @eggheadio @FrontendMasters · #JS',
+                image: kent,
+                link: 'https://twitter.com/kentcdodds',
+            },
+        ],
         article: [],
         note: [],
         isModalOpen: false    

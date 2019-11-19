@@ -1,15 +1,39 @@
-@import "~sass-rem";
-:root {
-  --blue: #1f58ff;  
-  --gray: #7d7d7d;
+@import '../../assets/scss/base.scss';
+
+@keyframes slide {
+  50% { left: 0; }
+  100% {left: rem(3000px)}
 }
-
-@keyframes fadeIn{from{opacity:0}to{opacity:1}};
-
 .title { 
     color: var(--blue);
     margin: 0;
     font-weight: 700;
-    animation: fadeIn 500ms ease-in-out 200ms both;
+    animation: fadeIn 500ms ease-in-out 400ms both;
+
+    &SectionTitle {
+      @extend .title;
+      padding-left: rem(40px);
+      &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: rem(-6000px);
+        width: 100%;
+        height: 100%;
+        background: var(--blue);
+        animation: slide 800ms ease-in-out 120ms both;
+  
+  
+      }
+    }
+    &SectionDesc {
+      @extend .title;
+      padding-left: rem(40px);
+      font-size: rem(16px);
+      font-weight: 300;
+      color: var(--gray);
+      animation: fadeIn 500ms ease-in-out 400ms both;
+
+    }
 
 }

@@ -1,17 +1,12 @@
-@import "~sass-rem";
-:root {
-  --blue: #1f58ff;  
-  --white: #ffffff;
-}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}};
+@import '../../assets/scss/base.scss';
 
 .wrapper {
-    padding: 50px 80px;
+    padding: rem(50px 80px);
     top: 12%;
     left: calc(50% - 740px);
     right: 0;
     margin: 0 auto;
-    max-width: 650px;
+    max-width: rem(650px);
     background-color: #ffffff;
     box-shadow: 0 20px 40px -10px rgba(#818181, .5);
     position: fixed;
@@ -19,13 +14,13 @@
 }
 
 .closeButton {
-    width: 27px;
-    height: 27px;
+    width: rem(27px);
+    height: rem(27px);
     background: #1e58ff;
     border: none;
     position: absolute;
-    right: 30px;
-    top: 30px;
+    right: rem(30px);
+    top: rem(30px);
     animation: fadeIn 500ms ease-in-out 2400ms both;
     transition: all .8s;
     &:hover {
@@ -43,8 +38,8 @@
     &::before, 
     &::after {
       content: '';
-      width: 16px;
-      height: 2px;
+      width: rem(16px);
+      height: rem(2px);
       position: absolute;
       background: white;
       display: block;

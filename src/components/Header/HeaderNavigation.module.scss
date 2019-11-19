@@ -1,8 +1,5 @@
-@import "~sass-rem";
-:root {
-  --blue: #1f58ff;  
-  --dark-gray: #818181;
-}
+@import '../../assets/scss/base.scss';
+
 .wrapper {
     display: inline-flex;
 
@@ -13,7 +10,7 @@
         &Link {
             text-decoration: none;
             color: var(--dark-gray);
-            margin-right: 50px;
+            margin-right: rem(50px);
     
             &Active {
                 font-weight: 700;

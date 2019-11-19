@@ -1,6 +1,8 @@
+@import '../../assets/scss/base.scss';
+
 .wrapper {
     display: grid;
     grid-template-columns: 120px 1fr 100px;
     align-items: center;
-    padding: 30px 40px;
+    padding: rem(30px 40px);
 }
